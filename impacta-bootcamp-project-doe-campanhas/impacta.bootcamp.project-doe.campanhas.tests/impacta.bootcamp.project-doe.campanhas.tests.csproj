@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>impacta.bootcamp.project_doe.campanhas.tests</RootNamespace>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Application\" />
+    <None Remove="Application\UseCases\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Application\" />
+    <Folder Include="Application\UseCases\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\impacta.bootcamp.project.doe.campanhas.application\impacta.bootcamp.project.doe.campanhas.application.csproj" />
+    <ProjectReference Include="..\impacta.bootcamp.project-doe.campanhas.core\impacta.bootcamp.project-doe.campanhas.core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="UnitTest1.cs" />
+  </ItemGroup>
+</Project>

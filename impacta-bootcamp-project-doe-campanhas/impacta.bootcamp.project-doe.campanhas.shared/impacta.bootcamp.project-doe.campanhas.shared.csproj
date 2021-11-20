@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>impacta.bootcamp.project_doe.campanhas.shared</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Azure\" />
+    <None Remove="Azure.Storage.Blobs" />
+    <None Remove="Microsoft.Azure.Storage.Blob" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Azure\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.10.0" />
+    <PackageReference Include="Microsoft.Azure.Storage.Blob" Version="11.2.3" />
+  </ItemGroup>
+</Project>

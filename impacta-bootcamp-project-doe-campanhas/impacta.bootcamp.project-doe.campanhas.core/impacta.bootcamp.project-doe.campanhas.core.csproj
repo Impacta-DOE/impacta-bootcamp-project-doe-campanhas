@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>impacta.bootcamp.project_doe.campanhas.core</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="DTOs\" />
+    <None Remove="Interfaces\" />
+    <None Remove="Interfaces\UseCases\" />
+    <None Remove="Interfaces\UseCases\Create\" />
+    <None Remove="Enums\" />
+    <None Remove="Interfaces\Repositories\" />
+    <None Remove="Entities\" />
+    <None Remove="Entities\Settings\" />
+    <None Remove="Entities\DoeAuth\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DTOs\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Interfaces\UseCases\" />
+    <Folder Include="Interfaces\UseCases\Create\" />
+    <Folder Include="Enums\" />
+    <Folder Include="Interfaces\Repositories\" />
+    <Folder Include="Entities\" />
+    <Folder Include="Entities\Settings\" />
+    <Folder Include="Entities\DoeAuth\" />
+  </ItemGroup>
+</Project>
