@@ -15,6 +15,8 @@
     <None Remove="Entities\" />
     <None Remove="Entities\Settings\" />
     <None Remove="Entities\DoeAuth\" />
+    <None Remove="Interfaces\Repositories\PontoColeta\" />
+    <None Remove="Interfaces\UseCases\PontoColeta\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DTOs\" />
@@ -26,5 +28,7 @@
     <Folder Include="Entities\" />
     <Folder Include="Entities\Settings\" />
     <Folder Include="Entities\DoeAuth\" />
+    <Folder Include="Interfaces\Repositories\PontoColeta\" />
+    <Folder Include="Interfaces\UseCases\PontoColeta\" />
   </ItemGroup>
 </Project>

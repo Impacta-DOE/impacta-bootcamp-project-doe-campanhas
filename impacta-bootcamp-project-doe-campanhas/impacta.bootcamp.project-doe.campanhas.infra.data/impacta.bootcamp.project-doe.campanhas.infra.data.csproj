@@ -18,6 +18,7 @@
     <None Remove="ExternalServices\DoeAuth\Models\" />
     <None Remove="ExternalServices\DoeAuth\Services\" />
     <None Remove="Microsoft.Extensions.Configuration" />
+    <None Remove="Data\Repositories\PontoDeColeta\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
@@ -28,6 +29,7 @@
     <Folder Include="ExternalServices\DoeAuth\Interfaces\" />
     <Folder Include="ExternalServices\DoeAuth\Models\" />
     <Folder Include="ExternalServices\DoeAuth\Services\" />
+    <Folder Include="Data\Repositories\PontoDeColeta\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\impacta.bootcamp.project-doe.campanhas.core\impacta.bootcamp.project-doe.campanhas.core.csproj" />

@@ -16,6 +16,11 @@ namespace impacta.bootcamp.project_doe.campanhas.ioc
             services.AddScoped<impacta.bootcamp.project_doe.campanhas.core.Interfaces.UseCases.Create.ICreateUseCase, impacta.bootcamp.project.doe.campanhas.application.UseCases.Create.CreateUseCase>();
             services.AddScoped<impacta.bootcamp.project_doe.campanhas.core.Interfaces.Repositories.ICreateRepository, impacta.bootcamp.project_doe.campanhas.infra.data.Data.Repositories.CreateRepository>();
             services.AddScoped<IAuthServices, AuthServices>();
+            services.AddScoped<impacta.bootcamp.project_doe.campanhas.core.Interfaces.UseCases.PontoColeta.IPontoColetaCreateUseCase, impacta.bootcamp.project.doe.campanhas.application.UseCases.PontoColeta.PontoColetaCreateUseCase>();
+            services.AddScoped<impacta.bootcamp.project_doe.campanhas.core.Interfaces.Repositories.PontoColeta.ICreatePontoColetaRepository, impacta.bootcamp.project_doe.campanhas.infra.data.Data.Repositories.PontoDeColeta.CreatePontoColetaRepository>();
+            services.AddScoped<impacta.bootcamp.project_doe.campanhas.core.Interfaces.UseCases.PontoColeta.IPontoColetaGetAllUseCase, impacta.bootcamp.project.doe.campanhas.application.UseCases.PontoColeta.PontoColetaGetAllUseCase>();
+            services.AddScoped<impacta.bootcamp.project_doe.campanhas.core.Interfaces.Repositories.PontoColeta.IGetAllPontoColetaRepository, impacta.bootcamp.project_doe.campanhas.infra.data.Data.Repositories.PontoDeColeta.GetAllPontoColetaRepository>();
+
             _provider = services.BuildServiceProvider();
         }
 

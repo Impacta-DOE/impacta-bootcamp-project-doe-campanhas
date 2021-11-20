@@ -19,6 +19,8 @@
     <None Remove="Endpoints\" />
     <None Remove="Endpoints\Campanhas\" />
     <None Remove="Helpers\" />
+    <None Remove="Endpoints\PontoColeta\" />
+    <None Remove="Models\PontoColeta\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
@@ -33,9 +35,14 @@
     <Folder Include="Endpoints\" />
     <Folder Include="Endpoints\Campanhas\" />
     <Folder Include="Helpers\" />
+    <Folder Include="Endpoints\PontoColeta\" />
+    <Folder Include="Models\PontoColeta\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\impacta.bootcamp.project-doe.campanhas.ioc\impacta.bootcamp.project-doe.campanhas.ioc.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+    <ProjectReference Include="..\impacta.bootcamp.project-doe.campanhas.core\impacta.bootcamp.project-doe.campanhas.core.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
     <ProjectReference Include="..\impacta.bootcamp.project-doe.campanhas.core\impacta.bootcamp.project-doe.campanhas.core.csproj">

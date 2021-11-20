@@ -13,6 +13,7 @@ namespace impacta.bootcamp.project.doe.campanhas.api.Models.Campanhas
         public string uf { get; set; }
         public int? id { get; set; }
         public int campanhaId { get; set; }
+       
 
     }
 }

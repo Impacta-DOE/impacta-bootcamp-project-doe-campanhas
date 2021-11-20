@@ -8,10 +8,12 @@
     <None Remove="UseCases\" />
     <None Remove="UseCases\Create\" />
     <None Remove="Microsoft.Extensions.Options" />
+    <None Remove="UseCases\PontoColeta\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="UseCases\" />
     <Folder Include="UseCases\Create\" />
+    <Folder Include="UseCases\PontoColeta\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\impacta.bootcamp.project-doe.campanhas.core\impacta.bootcamp.project-doe.campanhas.core.csproj" />

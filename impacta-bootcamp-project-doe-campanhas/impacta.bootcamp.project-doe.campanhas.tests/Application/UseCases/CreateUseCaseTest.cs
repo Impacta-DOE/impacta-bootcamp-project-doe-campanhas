@@ -2,6 +2,10 @@
 using System.Threading.Tasks;
 using impacta.bootcamp.project.doe.campanhas.application.UseCases.Create;
 using impacta.bootcamp.project_doe.campanhas.core.DTOs;
+using impacta.bootcamp.project_doe.campanhas.core.Entities.Settings;
+using impacta.bootcamp.project_doe.campanhas.core.Interfaces.Repositories;
+using Microsoft.Extensions.Options;
+using Moq;
 using NUnit.Framework;
 
 namespace impacta.bootcamp.project_doe.campanhas.tests.Application.UseCases
@@ -29,7 +33,10 @@ namespace impacta.bootcamp.project_doe.campanhas.tests.Application.UseCases
 
                 };
 
-                CreateUseCase useCase = new CreateUseCase();
+                var mock = new Mock<ICreateRepository>();
+                mock.Setup(m => m.createCampaign(dto)).Returns(Task.FromResult(new OperationCreateDTO() { sucesso = true }));
+                var options = Options.Create(new ConnectionStringsSetings());
+                CreateUseCase useCase = new CreateUseCase(mock.Object, options);
                 var create = await useCase.create(dto);
 
                 Assert.IsFalse(create.sucesso);
@@ -61,7 +68,10 @@ namespace impacta.bootcamp.project_doe.campanhas.tests.Application.UseCases
 
                 };
 
-                CreateUseCase useCase = new CreateUseCase();
+                var mock = new Mock<ICreateRepository>();
+                mock.Setup(m => m.createCampaign(dto)).Returns(Task.FromResult(new OperationCreateDTO() { sucesso = true }));
+                var options = Options.Create(new ConnectionStringsSetings());
+                CreateUseCase useCase = new CreateUseCase(mock.Object, options);
                 var create = await useCase.create(dto);
 
                 Assert.IsFalse(create.sucesso);
@@ -94,7 +104,10 @@ namespace impacta.bootcamp.project_doe.campanhas.tests.Application.UseCases
 
                 };
 
-                CreateUseCase useCase = new CreateUseCase();
+                var mock = new Mock<ICreateRepository>();
+                mock.Setup(m => m.createCampaign(dto)).Returns(Task.FromResult(new OperationCreateDTO() { sucesso = true }));
+                var options = Options.Create(new ConnectionStringsSetings());
+                CreateUseCase useCase = new CreateUseCase(mock.Object, options);
                 var create = await useCase.create(dto);
 
                 Assert.IsFalse(create.sucesso);
@@ -126,7 +139,10 @@ namespace impacta.bootcamp.project_doe.campanhas.tests.Application.UseCases
 
                 };
 
-                CreateUseCase useCase = new CreateUseCase();
+                var mock = new Mock<ICreateRepository>();
+                mock.Setup(m => m.createCampaign(dto)).Returns(Task.FromResult(new OperationCreateDTO() { sucesso = true }));
+                var options = Options.Create(new ConnectionStringsSetings());
+                CreateUseCase useCase = new CreateUseCase(mock.Object, options);
                 var create = await useCase.create(dto);
 
                 Assert.IsFalse(create.sucesso);
@@ -157,8 +173,10 @@ namespace impacta.bootcamp.project_doe.campanhas.tests.Application.UseCases
                     pontosColeta = null
 
                 };
-
-                CreateUseCase useCase = new CreateUseCase();
+                var mock = new Mock<ICreateRepository>();
+                mock.Setup(m => m.createCampaign(dto)).Returns(Task.FromResult(new OperationCreateDTO() { sucesso = true }));
+                var options = Options.Create(new ConnectionStringsSetings ());
+                CreateUseCase useCase = new CreateUseCase(mock.Object,options);
                 var create = await useCase.create(dto);
 
                 Assert.IsFalse(create.sucesso);
@@ -191,7 +209,10 @@ namespace impacta.bootcamp.project_doe.campanhas.tests.Application.UseCases
 
                 };
 
-                CreateUseCase useCase = new CreateUseCase();
+                var mock = new Mock<ICreateRepository>();
+                mock.Setup(m => m.createCampaign(dto)).Returns(Task.FromResult(new OperationCreateDTO() { sucesso = true }));
+                var options = Options.Create(new ConnectionStringsSetings());
+                CreateUseCase useCase = new CreateUseCase(mock.Object, options);
                 var create = await useCase.create(dto);
 
                 Assert.IsFalse(create.sucesso);
@@ -223,7 +244,10 @@ namespace impacta.bootcamp.project_doe.campanhas.tests.Application.UseCases
 
                 };
 
-                CreateUseCase useCase = new CreateUseCase();
+                var mock = new Mock<ICreateRepository>();
+                mock.Setup(m => m.createCampaign(dto)).Returns(Task.FromResult(new OperationCreateDTO() { sucesso = true }));
+                var options = Options.Create(new ConnectionStringsSetings());
+                CreateUseCase useCase = new CreateUseCase(mock.Object, options);
                 var create = await useCase.create(dto);
 
                 Assert.IsFalse(create.sucesso);
@@ -255,7 +279,10 @@ namespace impacta.bootcamp.project_doe.campanhas.tests.Application.UseCases
 
                 };
 
-                CreateUseCase useCase = new CreateUseCase();
+                var mock = new Mock<ICreateRepository>();
+                mock.Setup(m => m.createCampaign(dto)).Returns(Task.FromResult(new OperationCreateDTO() { sucesso = true }));
+                var options = Options.Create(new ConnectionStringsSetings());
+                CreateUseCase useCase = new CreateUseCase(mock.Object, options);
                 var create = await useCase.create(dto);
 
                 Assert.IsFalse(create.sucesso);

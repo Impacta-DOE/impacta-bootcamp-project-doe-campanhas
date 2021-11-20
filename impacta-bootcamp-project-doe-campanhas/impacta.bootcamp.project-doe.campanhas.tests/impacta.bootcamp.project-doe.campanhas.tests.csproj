@@ -11,15 +11,21 @@
     <PackageReference Include="NUnit" Version="3.12.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="Moq" Version="4.16.1" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <None Remove="Application\" />
     <None Remove="Application\UseCases\" />
+    <None Remove="Moq" />
+    <None Remove="Microsoft.Extensions.Options" />
+    <None Remove="Application\UseCases\PontoColeta\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Application\" />
     <Folder Include="Application\UseCases\" />
+    <Folder Include="Application\UseCases\PontoColeta\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\impacta.bootcamp.project.doe.campanhas.application\impacta.bootcamp.project.doe.campanhas.application.csproj" />
