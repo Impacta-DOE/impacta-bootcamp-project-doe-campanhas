@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  impacta.bootcamp.project.doe.campanhas.api:
+    image: ${DOCKER_REGISTRY-}impactabootcampprojectdoecampanhas
+    build:
+      context: .
+      dockerfile: impacta.bootcamp.project.doe.campanhas.api/Dockerfile

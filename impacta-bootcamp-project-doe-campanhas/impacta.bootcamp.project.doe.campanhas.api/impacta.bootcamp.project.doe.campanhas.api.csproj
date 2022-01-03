@@ -3,6 +3,8 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <DockerComposeProjectPath>../docker-compose.dcproj</DockerComposeProjectPath>
+    <UserSecretsId>8fda3ce3-b93c-4a69-937c-de857c37af1a</UserSecretsId>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -21,6 +23,7 @@
     <None Remove="Helpers\" />
     <None Remove="Endpoints\PontoColeta\" />
     <None Remove="Models\PontoColeta\" />
+    <None Remove="Models\Campanhas\GetAll\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
@@ -37,6 +40,7 @@
     <Folder Include="Helpers\" />
     <Folder Include="Endpoints\PontoColeta\" />
     <Folder Include="Models\PontoColeta\" />
+    <Folder Include="Models\Campanhas\GetAll\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\impacta.bootcamp.project-doe.campanhas.ioc\impacta.bootcamp.project-doe.campanhas.ioc.csproj">

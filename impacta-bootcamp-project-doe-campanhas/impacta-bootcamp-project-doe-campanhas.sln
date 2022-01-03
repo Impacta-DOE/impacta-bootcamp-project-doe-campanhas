@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "impacta.bootcamp.project-do
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "impacta.bootcamp.project-doe.campanhas.shared", "impacta.bootcamp.project-doe.campanhas.shared\impacta.bootcamp.project-doe.campanhas.shared.csproj", "{3D51A8FD-A08F-4311-98D4-3F9FCB0E9ABB}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{51519031-66F4-42DD-AC9A-A825A1C10649}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{3D51A8FD-A08F-4311-98D4-3F9FCB0E9ABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D51A8FD-A08F-4311-98D4-3F9FCB0E9ABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D51A8FD-A08F-4311-98D4-3F9FCB0E9ABB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51519031-66F4-42DD-AC9A-A825A1C10649}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51519031-66F4-42DD-AC9A-A825A1C10649}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51519031-66F4-42DD-AC9A-A825A1C10649}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51519031-66F4-42DD-AC9A-A825A1C10649}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

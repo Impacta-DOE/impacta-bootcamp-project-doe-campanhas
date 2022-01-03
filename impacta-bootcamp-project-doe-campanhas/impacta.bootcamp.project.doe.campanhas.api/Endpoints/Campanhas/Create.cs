@@ -56,7 +56,9 @@ namespace impacta.bootcamp.project.doe.campanhas.api.Endpoints.Campanhas
 
                 }
                 var model = ModelToDTO(request);
-                model.user = ((ClaimsIdentity)User.Identity).Claims.FirstOrDefault(cl => cl.Type == ClaimTypes.Email)?.Value;
+
+                model.user = "damian_lindgren@yahoo.com";
+                // model.user = ((ClaimsIdentity)User.Identity).Claims.FirstOrDefault(cl => cl.Type == ClaimTypes.Email)?.Value;
                 var create = await useCase.create(model);
                 var createResponse =  dtoToResponse(create);
 
@@ -70,7 +72,7 @@ namespace impacta.bootcamp.project.doe.campanhas.api.Endpoints.Campanhas
             }
             catch (Exception ex)
             {
-                string msg = $"Erro ao criar campanha" ;
+                string msg = $"Erro ao criar campanha" + ex.ToString();
 
                 var resp = new CreateResponse()
                 {

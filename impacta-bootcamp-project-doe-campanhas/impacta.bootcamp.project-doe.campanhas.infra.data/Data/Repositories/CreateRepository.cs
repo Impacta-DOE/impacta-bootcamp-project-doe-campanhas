@@ -22,8 +22,8 @@ namespace impacta.bootcamp.project_doe.campanhas.infra.data.Data.Repositories
            string insert  = $"declare @campanhaId int " +
 
 
-$" declare @pessoaId int " +
-$" select @pessoaId = p.pessoaId from users us join Pessoa p on p.userId = us.id where us.user_name =@user " +
+$" declare @userId int " +
+$" select @userId = us.id from users us  where us.user_name =@user " +
 
 $" insert into Campanha ("+
 $"    titulo    ,"+
@@ -31,7 +31,7 @@ $"    descricao  ,"+
 $"    tipoCampanhaId ,"+
 $"    tipoArrecadacaoId ," +
 $"    unidadeMedidaId," +
-$"    pessoaId ," +
+$"    userId ," +
 $"    urlImage ," +
 $"    metaArrecadacao ," +
 $"    dataLimite ," +
@@ -43,7 +43,7 @@ $"    @descricao  ," +
 $"    @tipoCampanhaId ," +
 $"    @tipoArrecadacaoId ," +
 $"    @unidadeMedidaId," +
-$"    @pessoaId ," +
+$"    @userId ," +
 $"    @urlImage ,"+
 $"    @metaArrecadacao ," +
 $"    @dataLimite ," +

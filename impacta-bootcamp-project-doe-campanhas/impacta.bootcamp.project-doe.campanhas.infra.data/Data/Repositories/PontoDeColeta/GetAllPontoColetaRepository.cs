@@ -30,10 +30,10 @@ namespace impacta.bootcamp.project_doe.campanhas.infra.data.Data.Repositories.Po
                   
                 });
 
-                string select = $" declare @pessoaId int " +
-$" select @pessoaId = p.pessoaId from users us join Pessoa p on p.userId = us.id where us.user_name =@user " +
+                string select = $" declare @userId int " +
+$" select @userId = us.id from users us  where us.user_name =@user " +
 
-$" select * from  PontoColeta where pessoaId = @pessoaId";
+$" select * from  PontoColeta where userId = @userId";
 
 
 
