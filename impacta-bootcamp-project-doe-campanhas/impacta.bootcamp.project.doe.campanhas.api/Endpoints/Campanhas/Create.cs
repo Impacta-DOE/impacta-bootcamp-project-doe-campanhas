@@ -57,8 +57,8 @@ namespace impacta.bootcamp.project.doe.campanhas.api.Endpoints.Campanhas
                 }
                 var model = ModelToDTO(request);
 
-                model.user = "damian_lindgren@yahoo.com";
-                // model.user = ((ClaimsIdentity)User.Identity).Claims.FirstOrDefault(cl => cl.Type == ClaimTypes.Email)?.Value;
+               // model.user = "damian_lindgren@yahoo.com";
+                model.user = ((ClaimsIdentity)User.Identity).Claims.FirstOrDefault(cl => cl.Type == ClaimTypes.Email)?.Value;
                 var create = await useCase.create(model);
                 var createResponse =  dtoToResponse(create);
 
@@ -122,11 +122,17 @@ namespace impacta.bootcamp.project.doe.campanhas.api.Endpoints.Campanhas
                 imageCapaBase64 = request.imageCapaBase64,
                 metaArrecadacao= request.metaArrecadacao,
                 unidadeMedidaId = request.unidadeMedidaId,
-                dataLimite = request.dataLimite
+                dataLimite = request.dataLimite,
+                imageCardBase64 = request.imageCardBase64
 
             };
 
+            if(request.voluntario != null)
+            {
+                dto.indPrecisaVolutario = request.voluntario.precisaVoluntario;
+                dto.descricaoVoluntario = request.voluntario.descricao;
 
+            }
 
             if(request.pontosColeta != null && request.pontosColeta.Count() > 0 )
             {

@@ -32,7 +32,8 @@ namespace impacta.bootcamp.project.doe.campanhas.application.UseCases.Create
              operationCreateDTO =  await isValidCreate(request);
             if (operationCreateDTO.sucesso) 
             {
-                request.urlImage = "";// await SaveImage(request.imageCapaBase64);
+                request.urlImage = await SaveImage(request.imageCapaBase64);
+                request.urlImageCard = await SaveImage(request.imageCardBase64);    
                 operationCreateDTO = await repo.createCampaign(request);
             }
 

@@ -35,7 +35,10 @@ $"    userId ," +
 $"    urlImage ," +
 $"    metaArrecadacao ," +
 $"    dataLimite ," +
-$"    estaAtiva ," +
+$"    imageCard ," +
+$"    indVoluntariado ," +
+$"   descricaoVoluntariado," +
+$"   estaAtiva," +
 $"    dataInclusao)" +
 $" select " +
 $"    @titulo    ," +
@@ -47,6 +50,9 @@ $"    @userId ," +
 $"    @urlImage ,"+
 $"    @metaArrecadacao ," +
 $"    @dataLimite ," +
+$"    @urlImageCard ," +
+$"    @indPrecisaVolutario ," +
+$"    @descricaoVoluntario ," +
 $"   1 ," +
 $"    GETDATE()" +
 $" SET @campanhaId = SCOPE_IDENTITY()" +

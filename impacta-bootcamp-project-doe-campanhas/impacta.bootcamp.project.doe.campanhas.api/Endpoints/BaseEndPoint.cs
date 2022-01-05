@@ -18,7 +18,7 @@ namespace impacta.bootcamp.project.doe.campanhas.api.Endpoints
         public abstract Task<ActionResult<TResponse>> HandleAsync( CancellationToken cancellationToken = default);
 
     }
-    //[Authorize]
+    [Authorize]
     [ApiController]
     public abstract class BaseEndPoint : ControllerBase
     { }

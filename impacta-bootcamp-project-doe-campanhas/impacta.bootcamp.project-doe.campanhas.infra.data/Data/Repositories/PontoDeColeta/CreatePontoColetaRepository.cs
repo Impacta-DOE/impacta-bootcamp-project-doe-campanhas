@@ -46,9 +46,9 @@ $"    @logradouro ," +
 $"    @numero ," +
 $"    @bairro," +
 $"    @cidade ," +
-$"    @uf ," +
-$"    @complemento ," +
-$"    @responsavel ";
+                $"    @uf ," +
+                $"    @complemento ," +
+                $"    @responsavel ";
 
 
 

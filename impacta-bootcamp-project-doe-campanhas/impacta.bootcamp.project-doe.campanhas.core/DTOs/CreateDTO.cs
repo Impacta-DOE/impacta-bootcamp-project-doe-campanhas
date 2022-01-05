@@ -15,11 +15,15 @@ namespace impacta.bootcamp.project_doe.campanhas.core.DTOs
         public Nullable<int> tipoCampanhaId { get; set; }
         public Nullable<int> tipoArrecadacaoId { get; set; }
         public string imageCapaBase64 { get; set; }
+        public string imageCardBase64 { get; set; }
         public string urlImage { get; set; }
+        public string urlImageCard { get; set; }
         public double metaArrecadacao { get; set; }
         public int unidadeMedidaId { get; set; }
         public string dataLimite { get; set; }
         public List<PontoDeColetaDTO> pontosColeta { get; set; }
-    
+        public bool  indPrecisaVolutario { get; set; }
+        public string descricaoVoluntario { get; set; }
+
     }
 }
