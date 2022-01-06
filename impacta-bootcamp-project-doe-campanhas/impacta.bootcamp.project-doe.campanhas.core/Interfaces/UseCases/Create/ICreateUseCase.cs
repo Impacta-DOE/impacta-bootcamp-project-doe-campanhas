@@ -8,6 +8,6 @@ namespace impacta.bootcamp.project_doe.campanhas.core.Interfaces.UseCases.Create
     {
 
         public Task<OperationCreateDTO> create(CreateDTO request);
-     
+        public Task<OperationCreateDTO> comment(CommentDTO request);
     }
 }

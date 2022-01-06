@@ -8,5 +8,7 @@ namespace impacta.bootcamp.project_doe.campanhas.core.Interfaces.Repositories
     {
 
         public  Task<OperationCreateDTO> createCampaign(CreateDTO dto);
+        public Task<OperationCreateDTO> commentCampaign(CommentDTO dto);
+        
     }
 }

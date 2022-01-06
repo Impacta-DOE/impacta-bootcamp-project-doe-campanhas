@@ -145,5 +145,10 @@ namespace impacta.bootcamp.project.doe.campanhas.application.UseCases.Create
             Span<byte> buffer = new Span<byte>(new byte[base64.Length]);
             return Convert.TryFromBase64String(base64, buffer, out int bytesParsed);
         }
+
+        public async Task<OperationCreateDTO> comment(CommentDTO request)
+        {
+            return await repo.commentCampaign(request);
+        }
     }
 }

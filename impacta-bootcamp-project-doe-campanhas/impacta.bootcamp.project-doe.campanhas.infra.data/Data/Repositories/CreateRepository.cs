@@ -15,7 +15,51 @@ namespace impacta.bootcamp.project_doe.campanhas.infra.data.Data.Repositories
             context = sqlContext;
         }
 
+        public async Task<OperationCreateDTO> commentCampaign(CommentDTO dto)
+        {
+            string insertComentario = $" declare @userId int " +
+        $" select @userId = us.id from users us  where us.user_name =@userName " +
+         " insert into campanhaComentario (descricao,campanhaId,userId) select @comentario , @campanhaId , @userId";
 
+            try
+            {
+
+                var sqlCon = await context.GetConnection();
+
+
+
+                using (var transaction = sqlCon.BeginTransaction())
+                {
+
+                    try
+                    {
+                     
+
+                        if (!string.IsNullOrWhiteSpace(dto.comentario))
+                        {
+                            sqlCon.Query<int>(insertComentario, dto, transaction);
+
+                        }
+
+                        transaction.Commit();
+
+                        return new OperationCreateDTO() { sucesso = true };
+                    }
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback();
+                        throw ex;
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
 
         public async Task<OperationCreateDTO> createCampaign(CreateDTO dto)
         {
