@@ -9,5 +9,8 @@ namespace impacta.bootcamp.project_doe.campanhas.core.Interfaces.UseCases.Create
 
         public Task<OperationCreateDTO> create(CreateDTO request);
         public Task<OperationCreateDTO> comment(CommentDTO request);
+        public Task<OperationCreateDTO> createPlan(PlanoMensalDTO request);
+        public Task<OperationCreateDTO> adPlan(int planoMensalId,string userName);
+                public Task<OperationCreateDTO> cancelPlan(int planoMensalId, string userName);
     }
 }

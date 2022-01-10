@@ -150,5 +150,20 @@ namespace impacta.bootcamp.project.doe.campanhas.application.UseCases.Create
         {
             return await repo.commentCampaign(request);
         }
+
+        public async Task<OperationCreateDTO> createPlan(PlanoMensalDTO request)
+        {
+            return await repo.createPlan(request);
+        }
+
+        public async Task<OperationCreateDTO> adPlan(int planoMensalId, string userName)
+        {
+            return await repo.adPlan(planoMensalId, userName);
+        }
+
+        public async Task<OperationCreateDTO> cancelPlan(int planoMensalId, string userName)
+        {
+            return await repo.cancelPlan(planoMensalId, userName);
+        }
     }
 }

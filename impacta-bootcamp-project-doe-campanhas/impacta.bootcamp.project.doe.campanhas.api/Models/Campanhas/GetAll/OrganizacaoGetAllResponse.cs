@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using impacta.bootcamp.project.doe.campanhas.api.Models.PlanoMensal;
 
 namespace impacta.bootcamp.project.doe.campanhas.api.Models.Campanhas.GetAll
 {
@@ -13,5 +14,6 @@ namespace impacta.bootcamp.project.doe.campanhas.api.Models.Campanhas.GetAll
         public string backgroundPaginaOrg { get; set; }
         public List<CampanhaGetAllResponse> campanhas { get; set; }
         public List<CampanhaGetAllResponse> acoes { get; set; }
+        public List<PlanoMensalModel> planosMensais { get; set; }
     }
 }

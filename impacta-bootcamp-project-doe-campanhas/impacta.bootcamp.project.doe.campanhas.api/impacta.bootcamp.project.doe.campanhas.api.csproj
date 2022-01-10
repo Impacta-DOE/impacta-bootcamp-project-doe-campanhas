@@ -24,6 +24,8 @@
     <None Remove="Endpoints\PontoColeta\" />
     <None Remove="Models\PontoColeta\" />
     <None Remove="Models\Campanhas\GetAll\" />
+    <None Remove="Endpoints\PlanoMensal\" />
+    <None Remove="Models\PlanoMensal\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
@@ -41,6 +43,8 @@
     <Folder Include="Endpoints\PontoColeta\" />
     <Folder Include="Models\PontoColeta\" />
     <Folder Include="Models\Campanhas\GetAll\" />
+    <Folder Include="Endpoints\PlanoMensal\" />
+    <Folder Include="Models\PlanoMensal\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\impacta.bootcamp.project-doe.campanhas.ioc\impacta.bootcamp.project-doe.campanhas.ioc.csproj">

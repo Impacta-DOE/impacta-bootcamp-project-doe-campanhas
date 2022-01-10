@@ -47,7 +47,7 @@ namespace impacta.bootcamp.project.doe.campanhas.api.Endpoints.Campanhas
             }
         }
         [HttpGet("organizacoes/getall")]
-        public async Task<ActionResult<List<OrganizacaoGetAllResponse>>> HandleAsyncOrganizacao([FromQuery] string nome, [FromQuery] string uf, [FromQuery] string cidade, [FromQuery] int? tipoArrecadacaoId, [FromQuery] string documento)
+        public async Task<ActionResult<List<OrganizacaoGetAllResponse>>> HandleAsyncOrganizacao( [FromQuery] string documento)
         {
             try
             {
